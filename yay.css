@@ -1,0 +1,27 @@
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.btn {
+  display: block;
+  background-color: #ccc;
+  border: none;
+  color: #4c4c4c;
+  padding: 5px;
+  background-color: #034485;
+  color: #eeeeee;
+}
+
+body {
+	padding-top: 100px;
+}
+
+/*.login {
+	padding: 5px;
+  background-color: #034485;
+  color: #eeeeee;
+}*/

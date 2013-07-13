@@ -1,0 +1,40 @@
+<head>
+  <title>yay</title>
+</head>
+
+<body>
+	{{> facebook}}
+	{{> people}}
+</body>
+
+<template name="people">
+	<ul id="list">
+		{{#each person}}
+			<li id="{{_id}}">
+				<button class="upvote">^</button>
+				<img class="picture" src="{{picture}}">
+				<div class="name">{{name}}</div>
+				<div class="votes">Votes: {{votes}}</div>
+				{{#if new fbId}}
+					<textarea class="new-blurb" placeholder="why should you be famous?">{{blurb}}</textarea>
+					<button class="add">I wanna be famous!</button>
+				{{else}}
+					<div class="blurb">{{blurb}}</div>
+				{{/if}}
+			</li>
+		{{/each}}
+	</ul>
+</template>
+
+<template name="facebook">
+	<div class="right">
+		{{#if loggedIn}}
+			<button class="btn logout">Logout!</button>
+			{{#if notFamous}}
+				<button class="btn famous">Make me famous!</button>
+			{{/if}}
+		{{else}}
+				<button class="btn login">Login with Facebook</button>
+		{{/if}}
+	</div>
+</template>
